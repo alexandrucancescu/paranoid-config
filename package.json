@@ -1,5 +1,5 @@
 {
-  "name": "typesafe-config",
+  "name": "paranoid-config",
   "version": "1.0.0",
   "description": "Config loader with type safety based on node-config and JSON schema",
   "main": "dist/index.js",
@@ -10,9 +10,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexandrucancescu/typesafe-config"
+    "url": "git+https://github.com/alexandrucancescu/paranoid-config"
   },
-  "homepage": "https://github.com/alexandrucancescu/typesafe-config",
+  "homepage": "https://github.com/alexandrucancescu/paranoid-config",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "dependencies": {
@@ -28,6 +28,7 @@
   },
   "keywords": [
     "config",
+    "paranoid",
     "safe-config",
     "configuration",
     "node-config",

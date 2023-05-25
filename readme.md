@@ -1,6 +1,6 @@
-## typesafe-config
+## paranoid-config
 
-Config loader with type safety based on node-config and JSON schema
+#### Config loader with type safety and validations
 
 ### About
 
@@ -11,7 +11,7 @@ definition as it also provides types.
 
 ### Usage
 ```shell
-npm install --save typesafe-config @sinclair/typebox
+npm install --save paranoid-config @sinclair/typebox
 ```
 
 In your project **config/local.json**:
@@ -29,7 +29,7 @@ In your project **config/local.json**:
 
 ```typescript
 import {Static, Type} from "@sinclair/typebox"
-import getConfig from "typesafe-config";
+import getConfig from "paranoid-config";
 
 const schema = Type.Object({
     db: Type.Object({
