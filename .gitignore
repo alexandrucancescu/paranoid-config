@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.npmignore
+
+config
+
+node_modules
+
+src/test*
+dist/test*

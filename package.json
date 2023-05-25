@@ -1,0 +1,38 @@
+{
+  "name": "typesafe-config",
+  "version": "1.0.0",
+  "description": "Config loader with type safety based on node-config and JSON schema",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "node dist/test.js"
+  },
+  "author": "Alexandru Cancescu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandrucancescu/typesafe-config"
+  },
+  "homepage": "https://github.com/alexandrucancescu/typesafe-config",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "config": "^3.3.9",
+    "lodash.clonedeep": "^4.5.0"
+  },
+  "devDependencies": {
+    "@sinclair/typebox": "^0.28.12",
+    "@types/config": "^3.3.0",
+    "@types/lodash.clonedeep": "^4.5.7",
+    "@types/node": "^20.2.3"
+  },
+  "keywords": [
+    "config",
+    "safe-config",
+    "configuration",
+    "node-config",
+    "ts-config",
+    "config-files",
+    "typescript"
+  ]
+}
