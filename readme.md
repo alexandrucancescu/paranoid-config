@@ -9,6 +9,8 @@ be familiar with it. This package is best used with typescript
 and [@sinclair/typebox](https://www.npmjs.com/package/@sinclair/typebox) for schema
 definition as it also provides types.
 
+**Warning:** This package is native [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and doesn't provide a CommonJS export. If your project uses CommonJS, you will have to [convert to ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
+
 ### Usage
 ```shell
 npm install --save paranoid-config @sinclair/typebox

@@ -3,10 +3,9 @@
   "display": "Node 18",
 
   "compilerOptions": {
-    "lib": ["es6"],
-    "module": "commonjs",
-    "target": "es2020",
-    "jsx": "preserve",
+    "lib": ["ES2022"],
+    "module": "ES2022",
+    "target": "es2022",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "sourceMap": false,

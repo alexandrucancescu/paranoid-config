@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const ajv_1 = require("ajv");
-const cloneDeep = require("lodash.clonedeep");
+import Ajv from "ajv";
+import cloneDeep from "lodash.clonedeep";
 function createErrorMessage(errors) {
     let message = "Config ";
     if (errors[0]?.instancePath) {
@@ -14,8 +12,8 @@ function createErrorMessage(errors) {
     message += errors[0]?.message;
     return new Error(message);
 }
-function getConfig(schema, options) {
-    const ajv = new ajv_1.default();
+export default function getConfig(schema, options) {
+    const ajv = new Ajv();
     const validate = ajv.compile(schema);
     if (options?.configDir) {
         process.env.NODE_CONFIG_DIR = options.configDir;
@@ -27,4 +25,3 @@ function getConfig(schema, options) {
     }
     return config;
 }
-exports.default = getConfig;

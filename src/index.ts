@@ -1,6 +1,5 @@
 import Ajv, {ErrorObject, JSONSchemaType, Schema} from "ajv"
-
-const cloneDeep = require("lodash.clonedeep");
+import cloneDeep from "lodash.clonedeep";
 
 interface IOptions {
     configDir?: string
