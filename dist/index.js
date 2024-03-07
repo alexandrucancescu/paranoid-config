@@ -10,7 +10,7 @@ function throwError(errors) {
         message += `'${path}' `;
     }
     message += errors[0]?.message;
-    return new Error(message);
+    throw new Error(message);
 }
 export default async function getConfig(schema, options) {
     const ajv = new Ajv();
