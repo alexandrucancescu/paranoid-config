@@ -22,7 +22,7 @@ export default async function getConfig<T>(
 
 	const { default: configLib } = await import('config')
 
-	const config = cloneDeep(configLib)
+	const config = { ...cloneDeep(configLib) }
 
 	if (!validate(config))
 		throw new Error(formatError(schema, config, validate.errors!))

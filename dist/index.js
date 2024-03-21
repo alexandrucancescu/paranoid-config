@@ -8,7 +8,7 @@ export default async function getConfig(schema, options) {
         process.env.NODE_CONFIG_DIR = options.configDir;
     }
     const { default: configLib } = await import('config');
-    const config = cloneDeep(configLib);
+    const config = { ...cloneDeep(configLib) };
     if (!validate(config))
         throw new Error(formatError(schema, config, validate.errors));
     return config;
