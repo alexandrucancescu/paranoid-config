@@ -1,25 +1,12 @@
-import Ajv, { ErrorObject, JSONSchemaType, Schema } from 'ajv'
+import Ajv, { JSONSchemaType, Schema } from 'ajv'
 import cloneDeep from 'lodash.clonedeep'
+import formatError from 'better-ajv-errors'
 
 interface IOptions {
 	configDir?: string
 }
 
 export type AjvSchema<T> = JSONSchemaType<T> | Schema
-
-function throwError(errors: ErrorObject[]) {
-	let message = 'Config '
-	if (errors[0]?.instancePath) {
-		const path = errors[0].instancePath
-			.split('/')
-			.filter((p) => p.length > 0)
-			.join('.')
-		message += `'${path}' `
-	}
-	message += errors[0]?.message
-
-	throw new Error(message)
-}
 
 export default async function getConfig<T>(
 	schema: AjvSchema<unknown>,
@@ -37,9 +24,8 @@ export default async function getConfig<T>(
 
 	const config = cloneDeep(configLib)
 
-	if (!validate(config)) {
-		throwError(validate.errors!)
-	}
+	if (!validate(config))
+		throw new Error(formatError(schema, config, validate.errors!))
 
 	return <T>config
 }
